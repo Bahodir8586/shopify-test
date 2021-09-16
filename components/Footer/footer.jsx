@@ -29,9 +29,9 @@ const Footer = () => {
         <footer className={"bg-primaryGray pt-20 pb-6 relative"}>
             <div className={"flex"}>
                 <div className={"w-full px-40"}>
-                    <label className={"text-xs tracking-widest uppercase block mb-3"}>Newsletter</label>
+                    <label className={"font-workSans text-xs tracking-widest uppercase block mb-3"}>Newsletter</label>
                     <input type={"text"} placeholder={"Enter your email"}
-                           className={"border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
+                           className={"font-workSans border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
                     <div className={"mt-7"}>
                         {contacts.map(({method, url}) =>
                             <Link href={url} key={method} className={"mr-5"}>
@@ -48,14 +48,14 @@ const Footer = () => {
                 <div className={"w-full flex mb-16"}>
                     {footerData.map(({title, links}) =>
                         <div key={title} className={"w-full"}>
-                            <h4 className={"mb-8 text-darkGray uppercase tracking-widest text-xs"}>{title}</h4>
+                            <h4 className={"font-workSans mb-8 text-darkGray uppercase tracking-widest text-xs"}>{title}</h4>
                             {links.map(({name, url}) => <Link href={url} key={name}>
-                                <a className={"block mb-3 text-lightGray capitalize text-sm hover:text-gray-800 transition duration-200"}>{name}</a>
+                                <a className={"font-openSans block mb-3 text-lightGray capitalize text-2sm hover:text-gray-800 transition duration-200"}>{name}</a>
                             </Link>)}
                         </div>)}
                 </div>
             </div>
-            <p className={"text-center text-secondaryGray text-xs"}>
+            <p className={"text-center text-secondaryGray text-2xs font-openSans"}>
                 ©2020 Again Faster. All Rights Reserved
             </p>
         </footer>
