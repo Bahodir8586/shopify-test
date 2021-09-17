@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from "next/link"
 import Image from 'next/image'
+import FooterMenu from "./FooterMenu";
 
 const footerData = [{
     title: "Again Faster",
@@ -43,18 +44,13 @@ const Footer = () => {
                     </div>
                     <div className={"w-full lg:px-0 absolute lg:-left-3 lg:top-32 -bottom-6 left-10"}>
                         <img src={"/imgs/footer.png"} alt={"A/F"}
-                         className={"object-cover"}/>
+                             className={"object-cover"}/>
                     </div>
                 </div>
 
                 <div className={"w-full flex mb-16 lg:flex-row flex-col"}>
                     {footerData.map(({title, links}) =>
-                        <div key={title} className={"w-full mb-6"}>
-                            <h4 className={"font-workSans mb-4 lg:mb-8 text-darkGray uppercase text-xs"}>{title}</h4>
-                            {links.map(({name, url}) => <Link href={url} key={name}>
-                                <a className={"font-openSans block mb-2 lg:mb-3 text-lightGray capitalize text-2sm hover:text-gray-800 transition duration-200"}>{name}</a>
-                            </Link>)}
-                        </div>)}
+                        <FooterMenu title={title} links={links} key={title}/>)}
                 </div>
             </div>
             <p className={"text-center text-secondaryGray text-2xs font-openSans"}>
