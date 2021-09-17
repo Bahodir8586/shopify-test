@@ -42,7 +42,7 @@ const Header = () => {
                     <nav className={"flex justify-between"}>
                         {menu.map(({url, name}) =>
                             <Link href={url} key={name}>
-                                <a className={"uppercase cursor-pointer font-openSans font-normal text-3xs text-black"}>{name}</a>
+                                <a className={"hover:text-secondaryGray transition duration-200 uppercase cursor-pointer font-openSans font-normal text-3xs text-black"}>{name}</a>
                             </Link>
                         )}
                     </nav>

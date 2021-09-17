@@ -11,7 +11,7 @@ const SectionInformation = () => {
                         training program. Functional dumbbell movements cultivate stability, coordination and strength in
                         ways that cannot be achieved using a barbell. Lighter dumbbells are great tools for accommodating
                         athletes with an injury or those not yet comfortable with a bar. Whether you are making your first
-                        equipment purchase or looking to expand your gym's capabilities, making dumbbells a priority will
+                        equipment purchase or looking to expand your gym`&apos;`s capabilities, making dumbbells a priority will
                         take your training to the next level.
                     </p>
                     <p className={""}>Need a way to organize your weights? Check out some of our Storage Options.</p>

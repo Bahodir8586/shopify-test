@@ -26,13 +26,13 @@ const contacts = [{method: "facebook", url: "/"}, {method: "instagram", url: "/"
 
 const Footer = () => {
     return (
-        <footer className={"bg-primaryGray pt-20 pb-6 relative"}>
-            <div className={"flex"}>
-                <div className={"w-full px-40"}>
+        <footer className={"bg-primaryGray pt-20 pb-6 relative overflow-hidden"}>
+            <div className={"flex lg:flex-row flex-col px-4 lg:px-0"}>
+                <div className={"w-full lg:px-40"}>
                     <label className={"font-workSans text-xs tracking-widest uppercase block mb-3"}>Newsletter</label>
                     <input type={"text"} placeholder={"Enter your email"}
                            className={"font-workSans border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
-                    <div className={"mt-7"}>
+                    <div className={"mt-7 mb-10"}>
                         {contacts.map(({method, url}) =>
                             <Link href={url} key={method} className={"mr-5"}>
                                 <a className={"inline-block mr-5 opacity-100"}>
@@ -41,16 +41,18 @@ const Footer = () => {
                             </Link>
                         )}
                     </div>
-                    <img src={"/imgs/footer.png"} width={475} height={160} alt={"A/F"}
-                         className={"absolute -left-5 top-32"}/>
+                    <div className={"w-full lg:px-0 absolute lg:-left-3 lg:top-32 -bottom-6 left-10"}>
+                        <img src={"/imgs/footer.png"} alt={"A/F"}
+                         className={"object-cover"}/>
+                    </div>
                 </div>
 
-                <div className={"w-full flex mb-16"}>
+                <div className={"w-full flex mb-16 lg:flex-row flex-col"}>
                     {footerData.map(({title, links}) =>
-                        <div key={title} className={"w-full"}>
-                            <h4 className={"font-workSans mb-8 text-darkGray uppercase tracking-widest text-xs"}>{title}</h4>
+                        <div key={title} className={"w-full mb-6"}>
+                            <h4 className={"font-workSans mb-4 lg:mb-8 text-darkGray uppercase text-xs"}>{title}</h4>
                             {links.map(({name, url}) => <Link href={url} key={name}>
-                                <a className={"font-openSans block mb-3 text-lightGray capitalize text-2sm hover:text-gray-800 transition duration-200"}>{name}</a>
+                                <a className={"font-openSans block mb-2 lg:mb-3 text-lightGray capitalize text-2sm hover:text-gray-800 transition duration-200"}>{name}</a>
                             </Link>)}
                         </div>)}
                 </div>
