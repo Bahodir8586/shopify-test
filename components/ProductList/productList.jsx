@@ -31,11 +31,6 @@ const products = [
 ]
 
 const CustomRightArrow = ({onClick, ...rest}) => {
-    const {
-        onMove,
-        carouselState: {currentSlide, deviceType}
-    } = rest;
-    // onMove means if dragging or swiping in progress.
     return (
         <button className={"absolute right-0"} onClick={() => onClick()}>
             <Image src={"/svgs/right-arrow.svg"} width={12} height={12} alt={"right"}/>
@@ -44,11 +39,6 @@ const CustomRightArrow = ({onClick, ...rest}) => {
 };
 
 const CustomLeftArrow = ({onClick, ...rest}) => {
-    const {
-        onMove,
-        carouselState: {currentSlide, deviceType}
-    } = rest;
-    // onMove means if dragging or swiping in progress.
     return (
         <button className={"absolute left-0"} onClick={() => onClick()}>
             <Image src={"/svgs/left-arrow.svg"} width={12} height={12} alt={"left"}/>
@@ -65,11 +55,11 @@ const ProductList = () => {
                 draggable={true}
                 showDots={false}
                 responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
+                ssr={true}
                 infinite={true}
-                autoPlay={false}
+                autoPlay={true}
                 arrows={true}
-                autoPlaySpeed={1500}
+                autoPlaySpeed={2500}
                 keyBoardControl={true}
                 customTransition="all .5s ease-in-out"
                 transitionDuration={500}

@@ -16,14 +16,13 @@ const SectionInformation = () => {
                         equipment purchase or looking to expand your gym&apos;s capabilities, making dumbbells a priority will
                         take your training to the next level.
                     </p>
-                    <p className={""}>Need a way to organize your weights? Check out some of our Storage Options.</p>
+                    <p>Need a way to organize your weights? Check out some of our Storage Options.</p>
                 </div>
                 <div className={"w-full"}>
                     <img src={"/imgs/info-1.png"} className={"object-cover w-full h-full"}/>
                 </div>
             </div>
 
-            {/*<VerticalLines/>*/}
             <div className={"lg:min-h-screen flex py-10 lg:py-20 lg:flex-row flex-col"}>
                 <div className={"w-full mb-6 lg:mb-0"}>
                     <img src={"/imgs/info-2.png"} className={"object-cover w-full h-full"}/>
@@ -50,7 +49,6 @@ const SectionInformation = () => {
                 </div>
             </div>
 
-            {/*<VerticalLines/>*/}
             <div className={"lg:min-h-screen flex py-10 lg:py-20 lg:flex-row flex-col"}>
                 <div className={"w-full"}>
                     <h2 className={"text-2xl lg:text-3xl font-bold lg:px-10 mb-6 lg:mt-24 lg:mr-32 uppercase"}>Perfect for indoor and outdoor workouts</h2>

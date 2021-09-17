@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Link from "next/link"
 import Image from 'next/image'
 import FooterMenu from "./FooterMenu";
@@ -28,13 +28,13 @@ const contacts = [{method: "facebook", url: "/"}, {method: "instagram", url: "/"
 const Footer = () => {
     return (
         <footer className={"bg-primaryGray pt-20 pb-6 relative overflow-hidden"}>
-            <div className={"flex lg:flex-row flex-col px-4 lg:px-0"}>
+            <div className={"flex flex-col lg:flex-row px-4 lg:px-0"}>
                 <div className={"w-full lg:px-40"}>
-                    <label className={"font-workSans text-xs tracking-widest uppercase block mb-3"}>Newsletter</label>
+                    <label className={"font-workSans text-xs uppercase block mb-3"}>Newsletter</label>
                     <div className={"relative"}>
-                        <input type={"text"}
+                        <input type={"email"}
                                placeholder={"Enter your email"}
-                               className={"font-workSans border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
+                               className={"font-workSans border-b border-secondaryGray bg-primaryGray py-4 placeholder-black text-sm opacity-50 w-full focus:outline-none focus:border-black "}/>
                         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                             <Image src={"/svgs/arrow.svg"} width={16} height={16}/>
                         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className={"w-full flex mb-16 lg:flex-row flex-col"}>
+                <div className={"w-full flex mb-16 flex-col lg:flex-row"}>
                     {footerData.map(({title, links}) =>
                         <FooterMenu title={title} links={links} key={title}/>)}
                 </div>

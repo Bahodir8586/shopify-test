@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image"
+
 const Stars = ({rating}) => {
     const stars = [1, 2, 3, 4, 5];
     return (
