@@ -55,6 +55,7 @@ const ProductList = () => {
                                  productName={productName}
                                  rating={rating}
                                  price={price}
+                                 key={productName}
                     />)}
             </Carousel>;
         </div>

@@ -8,6 +8,7 @@ module.exports = {
                 'secondaryGray': '#c4c4c4',
                 'darkGray': '#353535',
                 "lightGray": '#7e7e7e',
+                'lightWhite':"#fbfbfb",
             }
         },
         fontSize: {
