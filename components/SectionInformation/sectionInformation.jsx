@@ -26,14 +26,14 @@ const SectionInformation = () => {
                 </div>
                 <div className={"w-full"}>
                     <LazyLoad><img src={"/imgs/info-1.png"}
-                                                className={"object-cover w-full h-full"}/></LazyLoad>
+                                   className={"object-cover w-full h-full"} alt={"Info 1"}/></LazyLoad>
                 </div>
             </div>
 
             <div className={"lg:min-h-screen flex py-10 lg:py-20 lg:flex-row flex-col"}>
                 <div className={"w-full mb-6 lg:mb-0"}>
                     <LazyLoad offset={100}><img src={"/imgs/info-2.png"}
-                                                className={"object-cover w-full h-full"}/></LazyLoad>
+                                                className={"object-cover w-full h-full"} alt={"Info 2"}/></LazyLoad>
                 </div>
                 <div className={"text-2xs lg:text-2base w-full"}>
                     <div className={"lg:px-32"}>
@@ -65,7 +65,7 @@ const SectionInformation = () => {
                 </div>
                 <div className={"w-full"}>
                     <LazyLoad offset={800}><img src={"/imgs/info-3.png"}
-                                                className={"object-cover w-full h-full"}/></LazyLoad>
+                                                className={"object-cover w-full h-full"} alt={"Info 3"}/></LazyLoad>
                 </div>
             </div>
         </section>
