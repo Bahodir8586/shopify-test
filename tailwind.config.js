@@ -20,6 +20,7 @@ module.exports = {
             "2sm": ['14px', '23px'],
             base: ['16px', '24px'],
             "2base":['16px', '27px'],
+            "3base":['18px',  {lineHeight: '23.4px', letterSpacing: "1.44px"}],
             lg: ['20px', '28px'],
             xl: ['24px', '32px'],
             "2xl": ['28px', {lineHeight: '36px', letterSpacing: "2.24px"}],
