@@ -1,9 +1,11 @@
 import React from 'react';
+import VerticalLines from "./VerticalLines";
 
 const SectionInformation = () => {
     return (
-        <section className={"bg-black lg:px-10 px-4 text-white"}>
-            <div className={"flex py-10 font-openSans text-2xs lg:text-2sm lg:flex-row flex-col"}>
+        <section className={"bg-black lg:px-10 px-4 text-white h-full"}>
+            <VerticalLines/>
+            <div className={"lg:min-h-screen flex py-10 font-openSans text-2xs lg:text-2sm lg:flex-row flex-col"}>
                 <div className={"w-full lg:px-10"}>
                     <h1 className={"text-3base lg:text-2xl uppercase font-semibold lg:font-normal mb-5 lg:mb-32 lg:mt-4"}>Rubber Hex Dumbbells</h1>
                     <p className={"mb-10 lg:mb-20"}>
@@ -20,7 +22,9 @@ const SectionInformation = () => {
                     <img src={"/imgs/info-1.png"} className={"object-cover w-full h-full"}/>
                 </div>
             </div>
-            <div className={"flex py-10 lg:py-20 lg:flex-row flex-col"}>
+
+            {/*<VerticalLines/>*/}
+            <div className={"lg:min-h-screen flex py-10 lg:py-20 lg:flex-row flex-col"}>
                 <div className={"w-full mb-6 lg:mb-0"}>
                     <img src={"/imgs/info-2.png"} className={"object-cover w-full h-full"}/>
                 </div>
@@ -45,7 +49,9 @@ const SectionInformation = () => {
                     </div>
                 </div>
             </div>
-            <div className={"flex py-10 lg:py-20 lg:flex-row flex-col"}>
+
+            {/*<VerticalLines/>*/}
+            <div className={"lg:min-h-screen flex py-10 lg:py-20 lg:flex-row flex-col"}>
                 <div className={"w-full"}>
                     <h2 className={"text-2xl lg:text-3xl font-bold lg:px-10 mb-6 lg:mt-24 lg:mr-32 uppercase"}>Perfect for indoor and outdoor workouts</h2>
                 </div>

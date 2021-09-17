@@ -31,8 +31,14 @@ const Footer = () => {
             <div className={"flex lg:flex-row flex-col px-4 lg:px-0"}>
                 <div className={"w-full lg:px-40"}>
                     <label className={"font-workSans text-xs tracking-widest uppercase block mb-3"}>Newsletter</label>
-                    <input type={"text"} placeholder={"Enter your email"}
-                           className={"font-workSans border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
+                    <div className={"relative"}>
+                        <input type={"text"}
+                               placeholder={"Enter your email"}
+                               className={"font-workSans border-b border-secondaryGray bg-primaryGray focus:outline-none focus:border-black py-4 placeholder-black text-sm opacity-50 w-full"}/>
+                        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <Image src={"/svgs/arrow.svg"} width={16} height={16}/>
+                        </div>
+                    </div>
                     <div className={"mt-7 mb-10"}>
                         {contacts.map(({method, url}) =>
                             <Link href={url} key={method} className={"mr-5"}>
@@ -42,7 +48,7 @@ const Footer = () => {
                             </Link>
                         )}
                     </div>
-                    <div className={"w-full lg:px-0 absolute lg:-left-3 lg:top-32 -bottom-6 left-10"}>
+                    <div className={"w-full lg:w-max lg:px-0 absolute lg:-left-3 lg:top-36 -bottom-6 left-10"}>
                         <img src={"/imgs/footer.png"} alt={"A/F"}
                              className={"object-cover"}/>
                     </div>
