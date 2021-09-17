@@ -16,6 +16,7 @@ module.exports = {
             xs: ['12px', {lineHeight: '14px', letterSpacing: "2px"}],
             "2xs": ['12px', {lineHeight: '20px', letterSpacing: "2px"}],
             "3xs": ['12px', {lineHeight: '16.8px', letterSpacing: "2.1px"}],
+            "4xs":['12px', '20px'],
             sm: ['14px', '20px'],
             "2sm": ['14px', '23px'],
             base: ['16px', '24px'],

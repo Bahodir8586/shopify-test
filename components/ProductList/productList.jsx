@@ -1,7 +1,9 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import ProductItem from "./ProductItem";
+import Image from "next/image";
+import 'react-multi-carousel/lib/styles.css';
+
 
 const responsive = {
     desktop: {
@@ -11,12 +13,12 @@ const responsive = {
     },
     tablet: {
         breakpoint: {max: 1024, min: 464},
-        items: 2,
+        items: 3,
         slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
         breakpoint: {max: 464, min: 0},
-        items: 1,
+        items: 2,
         slidesToSlide: 1 // optional, default to 1.
     }
 };
@@ -28,10 +30,36 @@ const products = [
     {freeShipping: true, image: "/imgs/product4.jpg", productName: "Product Name 4", rating: 3, price: 35}
 ]
 
+const CustomRightArrow = ({onClick, ...rest}) => {
+    const {
+        onMove,
+        carouselState: {currentSlide, deviceType}
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return (
+        <button className={"absolute right-0"} onClick={() => onClick()}>
+            <Image src={"/svgs/right-arrow.svg"} width={12} height={12} alt={"right"}/>
+        </button>
+    )
+};
+
+const CustomLeftArrow = ({onClick, ...rest}) => {
+    const {
+        onMove,
+        carouselState: {currentSlide, deviceType}
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return (
+        <button className={"absolute left-0"} onClick={() => onClick()}>
+            <Image src={"/svgs/left-arrow.svg"} width={12} height={12} alt={"left"}/>
+        </button>
+    )
+};
+
 const ProductList = () => {
     return (
-        <section className={"py-20 px-10"}>
-            <h2 className={"text-2xl mb-10 uppercase font-openSans"}>You might also like</h2>
+        <section className={"py-10 px-4 lg:py-20 lg:px-10"}>
+            <h2 className={"text-2sm lg:text-2xl mb-4 lg:mb-10 uppercase font-openSans"}>You might also like</h2>
             <Carousel
                 swipeable={true}
                 draggable={true}
@@ -40,7 +68,7 @@ const ProductList = () => {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={false}
-                arrows={false}
+                arrows={true}
                 autoPlaySpeed={1500}
                 keyBoardControl={true}
                 customTransition="all .5s ease-in-out"
@@ -48,6 +76,9 @@ const ProductList = () => {
                 containerClass="flex justify-between "
                 itemClass="px-2"
                 centerMode={false}
+                removeArrowOnDeviceType={["tablet", "desktop"]}
+                customRightArrow={<CustomRightArrow/>}
+                customLeftArrow={<CustomLeftArrow/>}
             >
                 {products.map(({freeShipping, image, productName, rating, price}) =>
                     <ProductItem freeShipping={freeShipping}
@@ -57,7 +88,7 @@ const ProductList = () => {
                                  price={price}
                                  key={productName}
                     />)}
-            </Carousel>;
+            </Carousel>
         </section>
     )
 };
