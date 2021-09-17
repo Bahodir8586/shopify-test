@@ -30,7 +30,7 @@ const products = [
 
 const ProductList = () => {
     return (
-        <div className={"py-20 px-10"}>
+        <section className={"py-20 px-10"}>
             <h2 className={"text-2xl mb-10 uppercase font-openSans"}>You might also like</h2>
             <Carousel
                 swipeable={true}
@@ -58,7 +58,7 @@ const ProductList = () => {
                                  key={productName}
                     />)}
             </Carousel>;
-        </div>
+        </section>
     )
 };
 
